@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clark Kent Sequiño — Software Developer & IT Professional specializing in mobile app development, web development, and software engineering.">
+    <meta name="author" content="Clark Kent Sequiño">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#FF1E1E">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Clark Kent Sequiño — Software Developer">
+    <meta property="og:description" content="Software Developer & IT Professional building mobile apps, web applications, and scalable software solutions.">
+    <meta property="og:image" content="assets/NORTHPOINT FITNESS GYM.png">
+    <meta property="og:url" content="https://github.com/clarkky736">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clark Kent Sequiño — Software Developer">
+    <meta name="twitter:description" content="Software Developer & IT Professional building mobile apps, web applications, and scalable software solutions.">
+    <meta name="twitter:image" content="assets/NORTHPOINT FITNESS GYM.png">
+
+    <!-- Favicon (inline SVG data URI — no external file needed) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230B0B0B'/%3E%3Ctext x='50' y='72' font-family='Poppins,Arial,sans-serif' font-size='62' font-weight='800' fill='%23FF1E1E' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230B0B0B'/%3E%3Ctext x='50' y='72' font-family='Poppins,Arial,sans-serif' font-size='62' font-weight='800' fill='%23FF1E1E' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+
+    <title>Clark Kent Sequiño — Software Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Toast Notification -->
+    <div class="toast-msg" id="toast">
+        <span class="toast-icon">✅</span>
+        <span class="toast-body"></span>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </button>
+
+    <!-- ═══════════════════════════════════════
+         NAVBAR
+    ═══════════════════════════════════════ -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">CLARK<span class="brand-dot">.</span></a>
+            <button class="navbar-toggler border-0" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="var(--white)">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section id="home" class="hero">
+
+        <!-- Minecraft decorative background -->
+        <svg class="minecraft-bg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g class="mc-block" transform="translate(0,-10)">
+                <rect x="150" y="100" width="120" height="120"/>
+                <path d="M150 100 L210 70 L330 70 L270 100Z" opacity=".9"/>
+                <path d="M270 100 L270 220 L330 190 L330 70Z" opacity=".7"/>
+                <line x1="150" y1="140" x2="270" y2="140" stroke="#000" stroke-width="2" opacity=".2"/>
+                <line x1="150" y1="180" x2="270" y2="180" stroke="#000" stroke-width="2" opacity=".2"/>
+                <line x1="190" y1="100" x2="190" y2="220" stroke="#000" stroke-width="2" opacity=".2"/>
+                <line x1="230" y1="100" x2="230" y2="220" stroke="#000" stroke-width="2" opacity=".2"/>
+            </g>
+            <g class="mc-block" style="animation-delay:.25s" transform="translate(150,50)">
+                <rect x="280" y="180" width="80" height="80" class="mc-block-dark"/>
+                <path d="M280 180 L320 160 L400 160 L360 180Z" class="mc-block-dark" opacity=".9"/>
+                <path d="M360 180 L360 260 L400 240 L400 160Z" class="mc-block-dark" opacity=".7"/>
+                <line x1="280" y1="210" x2="360" y2="210" stroke="#000" stroke-width="1.5" opacity=".2"/>
+                <line x1="310" y1="180" x2="310" y2="260" stroke="#000" stroke-width="1.5" opacity=".2"/>
+            </g>
+            <g class="mc-block" style="animation-delay:.5s" transform="translate(-20,100)">
+                <rect x="100" y="350" width="60" height="60"/>
+                <path d="M100 350 L130 335 L190 335 L160 350Z" opacity=".9"/>
+                <path d="M160 350 L160 410 L190 395 L190 335Z" opacity=".7"/>
+            </g>
+            <!-- Diamond sword -->
+            <g class="mc-block" style="animation-delay:.15s" transform="translate(50,150) rotate(-25 50 50)">
+                <rect x="45" y="10" width="10" height="15" fill="#4DD9FF" opacity=".9"/>
+                <rect x="45" y="25" width="10" height="15" fill="#5BE5FF" opacity=".9"/>
+                <rect x="45" y="40" width="10" height="15" fill="#4DD9FF" opacity=".9"/>
+                <rect x="40" y="55" width="20" height="10" fill="#5BE5FF" opacity=".9"/>
+                <rect x="45" y="65" width="10" height="10" fill="#4DD9FF" opacity=".9"/>
+                <rect x="55" y="10" width="3"  height="65" fill="#000" opacity=".3"/>
+                <rect x="40" y="75" width="20" height="10" fill="#8B4513" opacity=".9"/>
+                <rect x="40" y="85" width="20" height="10" fill="#654321" opacity=".9"/>
+                <rect x="45" y="95" width="10" height="8"  fill="#FFD700" opacity=".9"/>
+            </g>
+            <!-- Creeper face -->
+            <g class="mc-accent" transform="translate(320,280)">
+                <rect x="10" y="10" width="20" height="30"/>
+                <rect x="50" y="10" width="20" height="30"/>
+                <rect x="30" y="50" width="20" height="20"/>
+                <rect x="20" y="75" width="10" height="20"/>
+                <rect x="50" y="75" width="10" height="20"/>
+                <rect x="30" y="95" width="20" height="10"/>
+            </g>
+            <!-- Scattered pixels -->
+            <rect class="mc-pixel" x="450" y="150" width="15" height="15" opacity=".7"/>
+            <rect class="mc-pixel" x="480" y="180" width="15" height="15" opacity=".5" style="animation-delay:.15s"/>
+            <rect class="mc-pixel" x="90"  y="280" width="15" height="15" opacity=".8" style="animation-delay:.45s"/>
+            <rect class="mc-pixel" x="500" y="400" width="15" height="15" opacity=".5" style="animation-delay:.6s"/>
+            <rect class="mc-accent" x="120" y="150" width="12" height="12" opacity=".4"/>
+            <rect class="mc-accent" x="460" y="250" width="12" height="12" opacity=".3" style="animation-delay:.25s"/>
+            <circle cx="110" cy="90"  r="3"   fill="#B19CD9" opacity=".6" class="mc-pixel" style="animation-delay:.1s"/>
+            <circle cx="125" cy="110" r="2"   fill="#B19CD9" opacity=".7" class="mc-pixel" style="animation-delay:.25s"/>
+            <circle cx="95"  cy="120" r="2.5" fill="#B19CD9" opacity=".5" class="mc-pixel" style="animation-delay:.4s"/>
+        </svg>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-7 hero-content">
+                    <div class="hero-badge reveal">
+                        <span class="badge-dot"></span>
+                        Available for new opportunities
+                    </div>
+                    <h1 class="reveal">CLARK KENT<br><span class="hero-surname">SEQUIÑO</span></h1>
+                    <p class="hero-tagline reveal">
+                        <span id="typing-text"></span><span class="typing-cursor"></span>
+                    </p>
+                    <p class="hero-sub reveal">
+                        BSIT graduate with internship experience in software engineering,
+                        application development, web development, API integration, and UI/UX design —
+                        focused on building reliable, user-centered solutions.
+                    </p>
+                    <div class="hero-buttons reveal">
+                        <a href="#projects" class="glow-btn primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+                            View Portfolio
+                        </a>
+                        <a href="#" class="glow-btn" id="downloadResume">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21l-8-9h6v-12h4v12h6l-8 9zm9-1v2h-18v-2h-2v4h22v-4h-2z"/></svg>
+                            Download Resume
+                        </a>
+                        <a href="#contact" class="glow-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         STATS BAR
+    ═══════════════════════════════════════ -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-6 col-md-4">
+                    <div class="stat-item reveal">
+                        <div class="stat-number" data-target="6">0</div>
+                        <div class="stat-label">Projects Delivered</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="stat-item reveal reveal-delay-1">
+                        <div class="stat-number" data-target="1"><span class="stat-suffix">+</span></div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="stat-item reveal reveal-delay-2">
+                        <div class="stat-number" data-target="10"><span class="stat-suffix">+</span></div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════ -->
+    <section id="about">
+        <div class="container">
+            <span class="section-label reveal">Who I Am</span>
+            <h2 class="section-title reveal">About Me</h2>
+            <p class="section-subtitle reveal">Software Developer & IT professional passionate about building real-world solutions</p>
+            <div class="row align-items-center g-4 g-lg-5">
+                <div class="col-lg-7">
+                    <div class="about-content reveal">
+                        <p class="about-text">
+                            I'm a Bachelor of Science in Information Technology graduate with
+                            internship experience in software engineering, application development,
+                            web development, API integration, backend support, frontend development,
+                            and UI/UX design.
+                        </p>
+                        <p class="about-text">
+                            Committed to applying technical expertise, problem-solving abilities,
+                            and attention to detail to develop reliable, user-centered solutions
+                            that enhance user experience, improve system quality, and support
+                            organizational objectives.
+                        </p>
+                        <div class="about-tags">
+                            <span class="about-tag">Mobile App Development</span>
+                            <span class="about-tag">Web Development</span>
+                            <span class="about-tag">Web App Development</span>
+                            <span class="about-tag">UI/UX Design</span>
+                            <span class="about-tag">Software Engineering</span>
+                            <span class="about-tag">REST API Integration</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row g-3">
+                        <div class="col-6 reveal reveal-delay-1">
+                            <div class="about-content about-mini text-center">
+                                <div class="about-mini-icon">📱</div>
+                                <h5 class="about-mini-title">Mobile Dev</h5>
+                                <p class="about-mini-desc">Flutter cross-platform apps</p>
+                            </div>
+                        </div>
+                        <div class="col-6 reveal reveal-delay-2">
+                            <div class="about-content about-mini text-center">
+                                <div class="about-mini-icon">🌐</div>
+                                <h5 class="about-mini-title">Web Dev</h5>
+                                <p class="about-mini-desc">Responsive &amp; modern web apps</p>
+                            </div>
+                        </div>
+                        <div class="col-6 reveal reveal-delay-3">
+                            <div class="about-content about-mini text-center">
+                                <div class="about-mini-icon">🎨</div>
+                                <h5 class="about-mini-title">UI/UX Design</h5>
+                                <p class="about-mini-desc">Intuitive user experiences</p>
+                            </div>
+                        </div>
+                        <div class="col-6 reveal reveal-delay-4">
+                            <div class="about-content about-mini text-center">
+                                <div class="about-mini-icon">⚙️</div>
+                                <h5 class="about-mini-title">Engineering</h5>
+                                <p class="about-mini-desc">Clean, scalable code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SKILLS
+    ═══════════════════════════════════════ -->
+    <section id="skills" class="section-dark">
+        <div class="container">
+            <span class="section-label reveal">What I Do</span>
+            <h2 class="section-title reveal">Skills &amp; Tools</h2>
+            <p class="section-subtitle reveal">Technical expertise across the full development stack</p>
+            <div class="row g-4">
+
+                <!-- Mobile Development -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card reveal">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 2h-8c-1.105 0-2 .896-2 2v16c0 1.105.895 2 2 2h8c1.104 0 2-.895 2-2v-16c0-1.104-.896-2-2-2zm-3 18h-2v-1h2v1zm3-3h-8v-12h8v12z"/></svg>
+                        </div>
+                        <h4>Mobile Dev</h4>
+                        <p>Flutter, Dart, cross-platform apps, Android Studio</p>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>Flutter / Dart</span><span>85%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>REST API Integration</span><span>80%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>UI Implementation</span><span>82%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card reveal reveal-delay-1">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 16.057v-3.057h2.994c-.059 1.143-.212 2.24-.456 3.279-.823-.12-1.674-.188-2.538-.222zm1.957 2.162c-.499 1.33-1.159 2.497-1.957 3.456v-3.62c.666.028 1.319.081 1.957.164zm-1.957-7.219v-3.015c.868-.034 1.721-.103 2.548-.224.238 1.027.389 2.111.446 3.239h-2.994zm0-5.014v-3.661c.806.969 1.471 2.15 1.971 3.496-.642.084-1.3.137-1.971.165zm2.703-3.267c1.237.496 2.354 1.228 3.29 2.146-.642.234-1.311.442-2.019.607-.344-.992-.775-1.91-1.271-2.753zm-7.241 13.56c-.244-1.039-.398-2.136-.456-3.279h2.994v3.057c-.865.034-1.714.102-2.538.222zm2.538 1.776v3.62c-.798-.959-1.458-2.126-1.957-3.456.638-.083 1.291-.136 1.957-.164zm-2.994-7.055c.057-1.128.207-2.212.446-3.239.827.121 1.68.19 2.548.224v3.015h-2.994zm1.024-5.179c.5-1.346 1.165-2.527 1.97-3.496v3.661c-.671-.028-1.329-.081-1.97-.165zm-2.005-.35c-.708-.165-1.377-.373-2.018-.607.937-.918 2.053-1.65 3.29-2.146-.496.844-.927 1.762-1.272 2.753zm-.549 1.918c-.264 1.151-.434 2.36-.492 3.611h-3.933c.165-1.658.739-3.197 1.617-4.518.88.361 1.816.67 2.808.907zm.009 9.262c-.988.236-1.92.542-2.797.9-.89-1.328-1.471-2.879-1.637-4.551h3.934c.058 1.265.231 2.488.5 3.651zm.553 1.917c.342.976.768 1.881 1.257 2.712-1.223-.49-2.326-1.211-3.256-2.115.636-.229 1.299-.435 1.999-.597zm9.924 0c.7.163 1.362.367 1.999.597-.931.903-2.034 1.625-3.257 2.116.489-.832.915-1.737 1.258-2.713zm.553-1.917c.27-1.163.442-2.386.501-3.651h3.934c-.167 1.672-.748 3.223-1.638 4.551-.877-.358-1.81-.664-2.797-.9zm.501-5.651c-.058-1.251-.229-2.46-.492-3.611.992-.237 1.929-.546 2.809-.907.877 1.321 1.451 2.86 1.616 4.518h-3.933z"/></svg>
+                        </div>
+                        <h4>Web Dev</h4>
+                        <p>HTML, CSS, JavaScript, Angular, Node.js, Bootstrap</p>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>HTML / CSS</span><span>90%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>JavaScript</span><span>80%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>Angular / Node.js</span><span>72%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card reveal reveal-delay-2">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.169 19.754c.522-.79.831-1.735.831-2.754 0-2.761-2.238-5-5-5s-5 2.239-5 5 2.238 5 5 5c1.019 0 1.964-.309 2.755-.832l2.831 2.832 1.414-1.414-2.831-2.832zm-4.169.246c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3zm-4.89 2h-7.11l2.599-3h2.696c.345 1.152.976 2.18 1.815 3zm-2.11-5h-10v-17h22v12.11c-.574-.586-1.251-1.068-2-1.425v-8.685h-18v13h8.295c-.19.634-.295 1.305-.295 2zm-4-4h-4v-2h4v2zm6-3h-10v-2h10v2zm4-3h-14v-2h14v2z"/></svg>
+                        </div>
+                        <h4>UI/UX Design</h4>
+                        <p>Figma, wireframing, prototyping, design systems</p>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>Figma</span><span>88%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>Wireframing</span><span>85%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>Prototyping</span><span>82%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend & Tools -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card reveal reveal-delay-3">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
+                        </div>
+                        <h4>Backend &amp; Tools</h4>
+                        <p>Visual Studio 2022, VS Code, Android Studio, Git, GitHub Desktop, XAMPP</p>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>MySQL / Database</span><span>78%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>Git / GitHub</span><span>80%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>Testing / Debugging</span><span>75%</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROJECTS
+    ═══════════════════════════════════════ -->
+    <section id="projects">
+        <div class="container">
+            <span class="section-label reveal">My Work</span>
+            <h2 class="section-title reveal">Featured Projects</h2>
+            <p class="section-subtitle reveal">Software I've built and problems I've solved</p>
+
+            <!-- Filter buttons -->
+            <div class="project-filter reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="finance">Finance</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6">
+                    <div class="project-card reveal" data-category="web">
+                        <div class="project-img">
+                            <img src="assets/NORTHPOINT FITNESS GYM.png" alt="NorthPoint Fitness Gym">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Web</span>
+                                <span class="project-tag">Fitness</span>
+                            </div>
+                            <h3>NorthPoint Fitness Gym</h3>
+                            <p class="project-detail"><strong>Problem:</strong> Gym members struggled with class scheduling, equipment availability tracking, and progress monitoring across the facility.</p>
+                            <p class="project-detail"><strong>Solution:</strong> Designed and developed a web-based membership management system with modules for member registration, payment tracking, and reporting. Created responsive user interfaces and assisted in system testing and deployment.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-6 2.333c.333-1.603 1-4.177 1-4.177s-2.667-2.223-1.333-2.777c1.333-.556 3.333 1.556 3.333 1.556s3.78-3.891 5.667-3.891c-.333 1.938-3.667 4.979-3.667 4.979v3.2h1z"/></svg>
+                                    Case Study
+                                </a>
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/></svg>
+                                    Live Preview
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="project-card reveal reveal-delay-1" data-category="finance">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=520&fit=crop" alt="Payment Management System" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Finance</span>
+                                <span class="project-tag">Web</span>
+                            </div>
+                            <h3>Payment Management System</h3>
+                            <p class="project-detail"><strong>Problem:</strong> Businesses faced complex workflows for processing invoices, tracking payments, and reconciling accounts.</p>
+                            <p class="project-detail"><strong>Solution:</strong> Built a streamlined payment processing interface with automated reconciliation tools and a comprehensive reporting dashboard.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-6 2.333c.333-1.603 1-4.177 1-4.177s-2.667-2.223-1.333-2.777c1.333-.556 3.333 1.556 3.333 1.556s3.78-3.891 5.667-3.891c-.333 1.938-3.667 4.979-3.667 4.979v3.2h1z"/></svg>
+                                    Case Study
+                                </a>
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/></svg>
+                                    Live Preview
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="project-card reveal" data-category="business">
+                        <div class="project-img">
+                            <img src="assets/FARM MHER.png" alt="Farm Mher" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Business</span>
+                                <span class="project-tag">Web</span>
+                            </div>
+                            <h3>Farm Mher</h3>
+                            <p class="project-detail"><strong>Problem:</strong> Farm managers lacked efficient tools to track crop cycles, inventory, equipment maintenance, and sales data.</p>
+                            <p class="project-detail"><strong>Solution:</strong> Developed a comprehensive farm management interface with crop planning, inventory tracking, and analytics visualization.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-6 2.333c.333-1.603 1-4.177 1-4.177s-2.667-2.223-1.333-2.777c1.333-.556 3.333 1.556 3.333 1.556s3.78-3.891 5.667-3.891c-.333 1.938-3.667 4.979-3.667 4.979v3.2h1z"/></svg>
+                                    Case Study
+                                </a>
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/></svg>
+                                    Live Preview
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="project-card reveal reveal-delay-1" data-category="mobile">
+                        <div class="project-img">
+                            <img src="assets/CONTAINER LOCATION.jpg" alt="Container Location Management" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Mobile</span>
+                                <span class="project-tag">Flutter</span>
+                            </div>
+                            <h3>Container Location Management</h3>
+                            <p class="project-detail"><strong>Problem:</strong> Logistics teams had no efficient way to track container positions, monitor status updates, and coordinate retrieval across large storage yards.</p>
+                            <p class="project-detail"><strong>Solution:</strong> Collaborated with the project owner to gather requirements, designed the mobile app architecture and database structure, developed backend APIs, integrated frontend components, and improved application workflow through iterative enhancements.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-6 2.333c.333-1.603 1-4.177 1-4.177s-2.667-2.223-1.333-2.777c1.333-.556 3.333 1.556 3.333 1.556s3.78-3.891 5.667-3.891c-.333 1.938-3.667 4.979-3.667 4.979v3.2h1z"/></svg>
+                                    Case Study
+                                </a>
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/></svg>
+                                    Live Preview
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="project-card reveal reveal-delay-1" data-category="mobile">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&h=520&fit=crop" alt="Gold Cube Hotel App" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Mobile</span>
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">Hospitality</span>
+                            </div>
+                            <h3>Gold Cube Hotel App</h3>
+                            <p class="project-detail"><strong>Problem:</strong> Hotel guests and staff had no unified mobile platform for room reservations, service requests, and real-time communication between front desk and guests.</p>
+                            <p class="project-detail"><strong>Solution:</strong> Built a Flutter mobile app featuring seamless room booking, in-app service requests, digital check-in/check-out, and a real-time messaging system for staff and guests.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-6 2.333c.333-1.603 1-4.177 1-4.177s-2.667-2.223-1.333-2.777c1.333-.556 3.333 1.556 3.333 1.556s3.78-3.891 5.667-3.891c-.333 1.938-3.667 4.979-3.667 4.979v3.2h1z"/></svg>
+                                    Case Study
+                                </a>
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/></svg>
+                                    Live Preview
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="project-card reveal" data-category="mobile">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&h=520&fit=crop" alt="Online Booking System" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Mobile</span>
+                                <span class="project-tag">Flutter</span>
+                            </div>
+                            <h3>Online Booking System</h3>
+                            <p class="project-detail"><strong>Problem:</strong> Customers faced friction booking appointments manually via calls or walk-ins, leading to scheduling conflicts and poor user experience.</p>
+                            <p class="project-detail"><strong>Solution:</strong> Developed a Flutter mobile app with intuitive calendar-based booking, real-time slot availability, and automated confirmation notifications.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-6 2.333c.333-1.603 1-4.177 1-4.177s-2.667-2.223-1.333-2.777c1.333-.556 3.333 1.556 3.333 1.556s3.78-3.891 5.667-3.891c-.333 1.938-3.667 4.979-3.667 4.979v3.2h1z"/></svg>
+                                    Case Study
+                                </a>
+                                <a href="#" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/></svg>
+                                    Live Preview
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /row -->
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROCESS
+    ═══════════════════════════════════════ -->
+    <section id="process" class="section-dark">
+        <div class="container">
+            <span class="section-label reveal">How I Work</span>
+            <h2 class="section-title reveal">Development Process</h2>
+            <p class="section-subtitle reveal">My approach to delivering reliable, well-built software</p>
+            <div class="process-track">
+
+                <div class="process-step reveal">
+                    <div class="process-icon">
+                        <span class="process-number">1</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
+                    </div>
+                    <h5>Understand</h5>
+                    <p>Gather requirements, define scope, clarify goals</p>
+                </div>
+
+                <div class="process-step reveal reveal-delay-1">
+                    <div class="process-icon">
+                        <span class="process-number">2</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 7v10h-20v-10h2v-2h2v2h3v-2h2v2h3v-2h2v2h3v-2h2v2h1zm-2 2h-16v6h16v-6zm-5.631 4h-4.369v-2h4.369c.178-.312.531-.5.949-.5.785 0 1.219.727.826 1.379-.194.322-.569.621-1.775.621zm-6.369-2v2h-3v-2h3z"/></svg>
+                    </div>
+                    <h5>Plan</h5>
+                    <p>Architecture, database design, tech stack selection</p>
+                </div>
+
+                <div class="process-step reveal reveal-delay-2">
+                    <div class="process-icon">
+                        <span class="process-number">3</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg>
+                    </div>
+                    <h5>Build</h5>
+                    <p>Clean code, REST APIs, UI implementation</p>
+                </div>
+
+                <div class="process-step reveal reveal-delay-3">
+                    <div class="process-icon">
+                        <span class="process-number">4</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6.285l-11.16 12.733-6.84-6.018 1.319-1.49 5.341 4.686 9.865-11.196 1.475 1.285z"/></svg>
+                    </div>
+                    <h5>Test</h5>
+                    <p>Debugging, validation, issue resolution</p>
+                </div>
+
+                <div class="process-step reveal reveal-delay-4">
+                    <div class="process-icon">
+                        <span class="process-number">5</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11h-7v-7h-2v7h-7v2h7v7h2v-7h7z"/></svg>
+                    </div>
+                    <h5>Review</h5>
+                    <p>Code review, feedback integration, refinement</p>
+                </div>
+
+                <div class="process-step reveal reveal-delay-5">
+                    <div class="process-icon">
+                        <span class="process-number">6</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 12l11-8v5c9.941.5 13 5 13 11 0-3-2.5-5.5-7-6.5v5.5l-11-8z"/></svg>
+                    </div>
+                    <h5>Deploy</h5>
+                    <p>Release, documentation, post-launch support</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════ -->
+    <section id="testimonials">
+        <div class="container">
+            <span class="section-label reveal">Feedback</span>
+            <h2 class="section-title reveal">Reviews</h2>
+            <p class="section-subtitle reveal">If you've worked with me on a project, I'd appreciate your honest feedback below.</p>
+
+            <!-- Dynamic user-submitted reviews grid -->
+            <div class="row g-4" id="reviews-grid">
+                <!-- User-submitted reviews are injected here by JS -->
+            </div><!-- /#reviews-grid -->
+
+            <!-- ── Leave a Review Form ─────────────────── -->
+            <div class="review-form-wrap reveal">
+                <div class="review-form-header">
+                    <span class="section-label review-form-label">Share Your Experience</span>
+                    <h3>Leave a Review</h3>
+                    <p>Worked with me on a project? I'd love to hear your feedback.</p>
+                </div>
+                <form id="reviewForm" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="reviewName">Your Name *</label>
+                                <input type="text" id="reviewName" class="form-control"
+                                       placeholder="e.g. Jane Smith" required minlength="2">
+                                <div class="form-error">Please enter your name.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="reviewRole">Your Role / Company</label>
+                                <input type="text" id="reviewRole" class="form-control"
+                                       placeholder="e.g. CEO, Acme Corp">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Rating *</label>
+                                <div class="star-picker" id="starPicker" role="radiogroup" aria-label="Rating">
+                                    <button type="button" class="star-btn" data-value="1" aria-label="1 star">★</button>
+                                    <button type="button" class="star-btn" data-value="2" aria-label="2 stars">★</button>
+                                    <button type="button" class="star-btn" data-value="3" aria-label="3 stars">★</button>
+                                    <button type="button" class="star-btn" data-value="4" aria-label="4 stars">★</button>
+                                    <button type="button" class="star-btn" data-value="5" aria-label="5 stars">★</button>
+                                </div>
+                                <input type="hidden" id="reviewRating" value="0">
+                                <div class="form-error" id="ratingError">Please select a rating.</div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label" for="reviewText">Your Review *</label>
+                                <textarea id="reviewText" class="form-control" rows="4"
+                                          placeholder="Tell others about your experience working with Clark…"
+                                          required minlength="20"></textarea>
+                                <div class="form-error">Please write at least 20 characters.</div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="glow-btn primary" id="submitReviewBtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                                Submit Review
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- /.review-form-wrap -->
+
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════ -->
+    <section id="contact" class="section-dark">
+        <div class="container">
+            <span class="section-label reveal">Get In Touch</span>
+            <h2 class="section-title reveal">Let's Work Together</h2>
+            <p class="section-subtitle reveal">Want to collaborate or bring me onto your team? Let's talk.</p>
+
+            <div class="row g-4 g-lg-5">
+
+                <!-- Contact Info -->
+                <div class="col-lg-4">
+                    <div class="contact-info reveal">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-item-label">Phone</div>
+                                <div class="contact-item-value">+63 931 910 6654</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-item-label">Email</div>
+                                <div class="contact-item-value">clarkkentsequino269@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-item-label">Location</div>
+                                <div class="contact-item-value">Available Worldwide (Remote)</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 12v-6h-2v8h7v-2h-5z"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-item-label">Availability</div>
+                                <div class="contact-item-value">Open to new projects</div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <p class="connect-label">Connect with me</p>
+                        <div class="social-links">
+                            <a href="https://github.com/clarkky736" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub" aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form reveal reveal-delay-1">
+                        <form id="contactForm" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="contactName">Your Name</label>
+                                        <input type="text" id="contactName" class="form-control"
+                                               placeholder="e.g. Jane Smith" required minlength="2">
+                                        <div class="form-error">Please enter your name.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="contactEmail">Your Email</label>
+                                        <input type="email" id="contactEmail" class="form-control"
+                                               placeholder="e.g. jane@example.com" required>
+                                        <div class="form-error">Please enter a valid email address.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="contactSubject">Subject</label>
+                                        <input type="text" id="contactSubject" class="form-control"
+                                               placeholder="e.g. UI Design Project Inquiry" required>
+                                        <div class="form-error">Please enter a subject.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="contactMessage">Message</label>
+                                        <textarea id="contactMessage" class="form-control" rows="5"
+                                                  placeholder="Tell me about your project…" required minlength="20"></textarea>
+                                        <div class="form-error">Please write a message (at least 20 characters).</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="glow-btn primary btn-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════ -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="footer-brand">CLARK<span class="brand-dot">.</span></div>
+                    <p class="footer-tagline">Software Developer & IT Professional — Building real-world digital solutions</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Work</a>
+                        <a href="#testimonials">Reviews</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="footer-copy">© 2026 Clark Kent Sequiño. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                    <p class="footer-copy">Built with <span class="brand-dot">♥</span> and lots of caffeine.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════
+         SCRIPTS
+    ═══════════════════════════════════════ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
+
+</body>
+</html>
